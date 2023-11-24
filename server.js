@@ -11,6 +11,7 @@ const app = express();
 //middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(express.static('public'));
 
 //Middleware to serve up static assets from the public folder
 app.use ('/api', api);
