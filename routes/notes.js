@@ -43,4 +43,18 @@ notes.post('/', (req, res) => {
     }
 });
 
+//Write delete - not working yet
+
+notes.delete('/notes/:id', (request, response) => {
+    const noteId = Number(request.params.id);
+    const newNotes = notes.filter((note) => note.id != accountId);
+  
+    if (!newNotes) {
+      response.status(500).send('Note not found.');
+    } else {
+      notes = newNotes;
+      response.send(notes);
+    }
+});
+
 module.exports = notes;
