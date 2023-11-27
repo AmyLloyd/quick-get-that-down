@@ -72,10 +72,9 @@ notes.post('/', (req, res) => {
    
 // });
 
-notes.delete("/:id", function(req, res) {
+notes.delete("/:id", async function(req, res) {
     //import notesData from db.json
-    
-    const notesData = readFromFile("./db/db.json"); 
+    const notesData = JSON.parse(await readFromFile("./db/db.json"));   
 
     let noteID = req.params.id;
     console.log(noteID);
@@ -88,6 +87,7 @@ notes.delete("/:id", function(req, res) {
     // Write new notes to db.json file
     writeToFile("./db/db.json", updatedData);
     res.json(updatedData);
+    
 })
 
 // notes.delete('/:id', (req, res) => {
