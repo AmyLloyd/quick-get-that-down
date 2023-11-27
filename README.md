@@ -27,23 +27,19 @@ https://stormy-escarpment-29702-726705b51eaa.herokuapp.com/
 ## Usage
 
 To use Quick-D, go to: https://stormy-escarpment-29702-726705b51eaa.herokuapp.com/ and click 'Get started'.
-```md
+
 ![landing page screen shot](assets\quick-d-landing-page.PNG)
-```
+
 
 You will be taken to the notes page.
 Type in the title and description of the note.
 
-```md
 ![notes page screenshot](assets\Quick-d-add-note.PNG)
-```
 
 When you have entered both a Title and Description, buttons will appear in the top-right corner.
 Click 'Save Note' to save your note for reference later. 
 
-```md 
 ![example note](assets\Quick-d-example-note.PNG)
-```
 
 To go back to a saved note, click on the title in the leftside column.
 To delete a note, click on the delete icon.
