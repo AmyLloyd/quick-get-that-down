@@ -3,8 +3,7 @@ const notes = require('express').Router();
 //Helper function to generate unique ids
 const uuid = require('../helpers/uuid');
 
-//import notesData from db.json
-const notesData = require('../db/db.json');
+
 
 
 
@@ -74,7 +73,9 @@ notes.post('/', (req, res) => {
 // });
 
 notes.delete("/:id", function(req, res) {
-    console.log(notesData);
+    //import notesData from db.json
+    
+    const notesData = readFromFile("./db/db.json"); 
 
     let noteID = req.params.id;
     console.log(noteID);
